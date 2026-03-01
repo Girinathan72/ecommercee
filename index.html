@@ -3,113 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Online Grocery Store</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-
-        /* Header */
-        header {
-            background-color: #2e8b57;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
-        /* Search box */
-        .search-box {
-            margin-top: 12px;
-        }
-
-        .search-box input {
-            padding: 8px;
-            width: 250px;
-            border-radius: 5px;
-            border: none;
-        }
-
-        .search-box button {
-            padding: 8px 14px;
-            border-radius: 5px;
-            border: none;
-            background-color: white;
-            color: #2e8b57;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        /* Product section */
-        .container {
-            padding: 30px;
-        }
-
-        .products {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 per row */
-            gap: 20px;
-        }
-
-        .product {
-            background-color: white;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-
-        .product img {
-            width: 100%;
-            height: 120px;           /* smaller height */
-            object-fit: contain;     /* NO cutting */
-            border-radius: 6px;
-            background-color: #fff;
-        }
-
-        .product h3 {
-            margin: 10px 0 5px;
-        }
-
-        .product p {
-            font-size: 14px;
-            color: #555;
-        }
-
-        .product button {
-            margin-top: 8px;
-            padding: 8px 12px;
-            border: none;
-            background-color: #2e8b57;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .product button:hover {
-            background-color: #246b45;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #2e8b57;
-            color: white;
-            text-align: center;
-            padding: 12px;
-            margin-top: 30px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
     <h1>FRESH MART</h1>
+    <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
     <div class="search-box">
         <input type="text" placeholder="Search products...">
@@ -117,55 +22,50 @@
     </div>
 </header>
 
-<div class="container">
-    <div class="products">
-
-        <!-- Row 1 -->
-        <div class="product">
-            <img src="images/rice.jpeg" alt="Basmati Rice">
-            <h3>Basmati Rice</h3>
-            <p>Premium quality</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="product">
-            <img src="images/wheat.jpeg" alt="Wheat Flour">
-            <h3>Wheat Flour</h3>
-            <p>Fresh atta</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="product">
-            <img src="images/sugar.jpeg" alt="Sugar">
-            <h3>Sugar</h3>
-            <p>Pure sugar</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <!-- Row 2 -->
-        <div class="product">
-            <img src="images/oil.jpeg" alt="Cooking Oil">
-            <h3>Cooking Oil</h3>
-            <p>Healthy oil</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="product">
-            <img src="images/salt.jpeg" alt="Salt">
-            <h3>Salt</h3>
-            <p>Iodized salt</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="product">
-            <img src="images/honey.jpeg" alt="Honey">
-            <h3>Honey</h3>
-            <p>Natural honey</p>
-            <button>Add to Cart</button>
-        </div>
-
+<!-- Hero section -->
+<section class="hero">
+    <div class="hero-content">
+        <h2>Fresh groceries, delivered fast</h2>
+        <p>Shop from hundreds of products and get them at your doorstep.</p>
+        <a class="cta-button" href="products.html">Shop Now</a>
     </div>
-</div>
+</section>
+
+<!-- Features -->
+<section class="features container">
+    <div class="feature">
+        <h3>Fast Delivery</h3>
+        <p>Get your order in as little as 1 hour.</p>
+    </div>
+    <div class="feature">
+        <h3>Fresh Quality</h3>
+        <p>Only the best products make it to our shelves.</p>
+    </div>
+    <div class="feature">
+        <h3>Best Prices</h3>
+        <p>Competitive pricing on all your grocery needs.</p>
+    </div>
+</section>
+
+<!-- Featured products preview -->
+<section class="container">
+    <h2>Featured Items</h2>
+    <div class="products">
+        <div class="product">
+            <img src="rice.jpeg" alt="Basmati Rice">
+            <h3>Basmati Rice</h3>
+        </div>
+        <div class="product">
+            <img src="oil.jpeg" alt="Cooking Oil">
+            <h3>Cooking Oil</h3>
+        </div>
+        <div class="product">
+            <img src="honey.jpeg" alt="Honey">
+            <h3>Honey</h3>
+        </div>
+    </div>
+    <p style="text-align:center; margin-top:20px;"><a href="products.html" class="cta-button">View All Products</a></p>
+</section>
 
 <footer>
     © 2026 Online Grocery Store | Created by Girinathan
@@ -173,3 +73,4 @@
 
 </body>
 </html>
+
